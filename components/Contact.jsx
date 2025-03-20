@@ -40,14 +40,14 @@ export const Contact = () => {
           </div>
           <div
             onClick={() => setmaxView(false)}
-            className=" hidden md:block bg-[#EAB308] w-4 h-4 rounded-full overflow-hidden  items-center justify-center text-transparent hover:text-black"
+            className=" hidden md:flex bg-[#EAB308] w-4 h-4 rounded-full overflow-hidden  items-center justify-center text-transparent hover:text-black"
           >
             {" "}
             <VscChromeMinimize size={10} />
           </div>
           <div
             onClick={() => setmaxView(true)}
-            className="hidden md:block bg-[#22C55E] w-4 h-4 rounded-full overflow-hidden items-center justify-center text-transparent hover:text-black"
+            className="hidden md:flex bg-[#22C55E] w-4 h-4 rounded-full overflow-hidden items-center justify-center text-transparent hover:text-black"
           >
             {" "}
             <FiMaximize2 size={10} />{" "}

@@ -78,14 +78,14 @@ export const Experience = () => {
           </div>
           <div
             onClick={() => setmaxView(false)}
-            className=" hidden md:block bg-[#EAB308] w-4 h-4 rounded-full overflow-hidden  items-center justify-center text-transparent hover:text-black"
+            className=" hidden md:flex bg-[#EAB308] w-4 h-4 rounded-full overflow-hidden  items-center justify-center text-transparent hover:text-black"
           >
             {" "}
             <VscChromeMinimize size={10} />
           </div>
           <div
             onClick={() => setmaxView(true)}
-            className="hidden md:block bg-[#22C55E] w-4 h-4 rounded-full overflow-hidden items-center justify-center text-transparent hover:text-black"
+            className="hidden md:flex bg-[#22C55E] w-4 h-4 rounded-full overflow-hidden items-center justify-center text-transparent hover:text-black"
           >
             {" "}
             <FiMaximize2 size={10} />{" "}
@@ -129,25 +129,11 @@ export const Timeline = ({ data, maxView }) => {
       {/* Scrollable Timeline Container */}
       <div
         ref={ref}
-        className={`relative  ${
-          contentHeight > containerHeight
-            ? "overflow-y-auto"
-            : "overflow-hidden"
-        }
-        `}
+        className="relative overflow-y-auto scrollbar-hide"
         style={{
-          maxHeight: "40vh", // Ensures it scrolls only when needed
-          scrollbarWidth: "none", // Firefox
-          msOverflowStyle: "none", // IE/Edge
+          maxHeight: maxView ? "75vh" : "45vh", // Adjust for full-screen mode
         }}
       >
-        {/* Hide scrollbar for WebKit (Chrome, Safari) */}
-        <style jsx>{`
-          ::-webkit-scrollbar {
-            display: none;
-          }
-        `}</style>
-
         {data.map((item, index) => (
           <div key={index} className="flex pt-10 gap-4 last:pb-4">
             {/* Timeline Dot */}
