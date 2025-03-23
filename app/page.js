@@ -36,7 +36,7 @@ const Page = () => {
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col items-center pt-40 md:pt-0 md:justify-center bg-black/30 text-white text-center">
           <Hero />
-          <div className="absolute bottom-3">
+          <div className="absolute bottom-3 z-10">
             {/* <UtilityBar/> */}
             <Dock />
           </div>

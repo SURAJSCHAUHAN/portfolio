@@ -11,23 +11,47 @@ import { CiLinkedin } from "react-icons/ci";
 
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { useMotionTemplate, useMotionValue, motion } from "motion/react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Contact = () => {
   const [maxView, setmaxView] = useState(false);
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    toast.info("Sending...");
+
+    try {
+      const response = await emailjs.send(
+        "service_6h4ccfj", // Replace with your Email.js Service ID
+        "template_6c8lo1w", // Replace with your Email.js Template ID
+        form,
+        "Z11xAB_DQDcgKvttQ" // Replace with your Email.js Public Key
+      );
+      console.log("SUCCESS!", response);
+      toast.success("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("FAILED...", error);
+      toast.error("Failed to send message.");
+    }
+  };
   return (
     <div
       className={`${
         maxView
           ? "w-[100vw] h-[100vh]"
-          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl text-white"
-      } bg-[#333333] `}
+          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl "
+      } bg-[#333333] text-white`}
     >
       <div className="flex gap-4 items-center h-[10%] pt-3 pl-6 text-lg font-bold">
         <div className="flex gap-2">
@@ -63,28 +87,45 @@ export const Contact = () => {
             maxView ? "p-30" : "p-6 md:p-10"
           } md:rounded-2xl`}
         >
+          <ToastContainer />
           <form onSubmit={handleSubmit}>
             <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
               <LabelInputContainer>
                 <Label htmlFor="firstname">Name</Label>
-                <Input id="firstname" placeholder="Tyler" type="text" />
+                <Input
+                  id="firstname"
+                  placeholder="Suraj"
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                />
               </LabelInputContainer>
               <LabelInputContainer>
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
-                  placeholder="projectmayhem@fc.com"
+                  placeholder="xyz@mail.com"
                   type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                 />
               </LabelInputContainer>
             </div>
             <LabelInputContainer>
               <Label>Message</Label>
-              <Textarea placeholder="Message" type="textarea"></Textarea>
+              <Textarea
+                placeholder="Message"
+                type="textarea"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+              ></Textarea>
             </LabelInputContainer>
 
             <button
-              className="group/btn mt-2 relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+              className="group/btn mt-2 relative block h-10 w-full rounded-md text-white font-medium bg-zinc-800 from-zinc-900 to-zinc-900 shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
               type="submit"
             >
               Submit
@@ -177,7 +218,7 @@ const Input = React.forwardRef(({ className, type, ...props }, ref) => {
       <input
         type={type}
         className={cn(
-          `shadow-input flex h-10 w-full rounded-md border-none bg-gray-50 px-3 py-2 text-sm text-black transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:ring-neutral-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-white dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-neutral-600`,
+          `flex h-10 w-full rounded-md border-none px-3 py-2 text-sm transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-zinc-800 text-white shadow-[0px_0px_1px_1px_#404040] focus-visible:ring-neutral-600`,
           className
         )}
         ref={ref}
@@ -220,7 +261,7 @@ const Textarea = React.forwardRef(({ className, type, ...props }, ref) => {
       <textarea
         type={type}
         className={cn(
-          `shadow-input flex h-20 w-full rounded-md border-none bg-gray-50 px-3 py-2 text-sm text-black transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:ring-neutral-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-white dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-neutral-600`,
+          `flex h-20 w-full rounded-md border-none px-3 py-2 text-sm  transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 bg-zinc-800 text-white shadow-[0px_0px_1px_1px_#404040] focus-visible:ring-neutral-600`,
           className
         )}
         ref={ref}

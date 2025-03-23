@@ -45,8 +45,8 @@ export const Skills = () => {
       className={`${
         maxView
           ? "w-[100vw] h-[100vh]"
-          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl text-white"
-      } bg-[#333333] `}
+          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl"
+      } bg-[#333333] text-white`}
     >
       <div className="flex gap-4 items-center h-[10%] pt-3 pl-6 text-lg font-bold">
         <div className="flex gap-2">

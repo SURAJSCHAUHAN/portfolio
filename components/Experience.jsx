@@ -16,7 +16,7 @@ export const Experience = () => {
       title: "Oct 2024- Present",
       content: (
         <div>
-          <h3 className="text-start text-neutral-800 dark:text-neutral-200 text-lg md:text-lg font-normal mb-5">
+          <h3 className="text-start text-neutral-200 text-lg md:text-lg font-normal mb-5">
             Software Trainee @
             <span className="text-blue-500 font-bold">I2E Consulting</span>
           </h3>
@@ -32,7 +32,7 @@ export const Experience = () => {
       title: "Oct 2023- Feb 2024",
       content: (
         <div>
-          <h3 className="text-start text-neutral-800 dark:text-neutral-200 text-lg md:text-lg font-normal mb-5">
+          <h3 className="text-start text-neutral-200 text-lg md:text-lg font-normal mb-5">
             Software Trainee @
             <span className="text-blue-500 font-bold">Cnetric Global</span>
           </h3>
@@ -48,7 +48,7 @@ export const Experience = () => {
       title: "July 2020- June 2024",
       content: (
         <div>
-          <h3 className="text-start text-neutral-800 dark:text-neutral-200 text-lg md:text-lg font-normal mb-5">
+          <h3 className="text-start text-neutral-200 text-lg md:text-lg font-normal mb-5">
             B.Tech in Computer Science
           </h3>
           <p className="text-start text-[15px] text-gray-300">
@@ -64,8 +64,8 @@ export const Experience = () => {
       className={`${
         maxView
           ? "w-[100vw] h-[100vh]"
-          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl text-white"
-      } bg-[#333333] `}
+          : " w-[90vw] min-h-[50vh] md:w-[60vw] md:min-h-[40vh] rounded-2xl"
+      } bg-[#333333] text-white`}
     >
       <div className="flex gap-4 items-center h-[10%] pt-3 pl-6 text-lg font-bold">
         <div className="flex gap-2">
@@ -121,7 +121,7 @@ export const Timeline = ({ data, maxView }) => {
       ref={containerRef}
     >
       <div className="pt-10 px-4 text-center">
-        <h2 className="text-lg md:text-xl mb-4 text-black dark:text-white">
+        <h2 className="text-lg md:text-xl mb-4 text-white">
           My Professional Journey
         </h2>
       </div>
@@ -137,19 +137,19 @@ export const Timeline = ({ data, maxView }) => {
         {data.map((item, index) => (
           <div key={index} className="flex pt-10 gap-4 last:pb-4">
             {/* Timeline Dot */}
-            <div className="relative flex flex-col md:items-center">
-              <div className="h-6 w-6 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                <div className="h-3 w-3 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-500" />
+            <div className="relative flex flex-col md:items-center z-10">
+              <div className="h-6 w-6 rounded-full bg-black flex items-center justify-center">
+                <div className="h-3 w-3 rounded-full bg-neutral-800 border border-neutral-500" />
               </div>
             </div>
 
             {/* Timeline Content */}
             <div className="w-full flex gap-10">
-              <h3 className="w-[20%] text-[15px] md:text-lg font-semibold text-neutral-500 dark:text-neutral-400">
+              <h3 className="w-[20%] text-[15px] md:text-lg font-semibold text-neutral-400">
                 {item.title}
               </h3>
               <div
-                className={`w-[80%] text-[15px] md:text-lg px-5 ${
+                className={`w-[80%] text-[15px] md:text-lg px-5  ${
                   maxView ? "px-20" : ""
                 }`}
               >
@@ -161,7 +161,7 @@ export const Timeline = ({ data, maxView }) => {
 
         {/* Timeline Line */}
         <div
-          className="absolute left-[14px] top-0 w-[2px] bg-neutral-300 dark:bg-neutral-700"
+          className="absolute left-[11px] top-0 w-[2px] bg-neutral-700"
           style={{ height: contentHeight }}
         />
       </div>
