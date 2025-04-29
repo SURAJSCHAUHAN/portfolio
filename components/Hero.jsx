@@ -21,13 +21,13 @@ export const Hero = () => {
       <div className="flex gap-10 md:gap-20 justify-center items-center mt-10 text-[15px] font-semibold">
         <button
           onClick={() => dispatch(setSelectedApp("Contact"))}
-          className="rounded-3xl bg-white text-black font-bold px-5 py-2"
+          className="rounded-3xl bg-white text-black font-bold px-5 py-2 cursor-pointer"
         >
           Let's Connect
         </button>
         <button
           onClick={() => dispatch(setSelectedApp("Projects"))}
-          className="rounded-3xl bg-white text-black font-bold px-5 py-2"
+          className="rounded-3xl bg-white text-black font-bold px-5 py-2 cursor-pointer"
         >
           View My Work
         </button>
