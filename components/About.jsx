@@ -4,6 +4,7 @@ import { VscChromeMinimize } from "react-icons/vsc";
 import { FiMaximize2 } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { setSelectedApp } from "../redux/appSlice";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const About = () => {
   const [maxView, setmaxView] = useState(false);
@@ -46,7 +47,7 @@ export const About = () => {
       <div
         className={`flex flex-col h-[90%] ${
           maxView ? "px-50 py-30" : " justify-center items-center px-10"
-        } mt-10 md:mt-5 gap-5`}
+        } mt-10 md:mt-5 gap-5 py-5`}
       >
         <h1 className="text-2xl md:text-4xl font-bold text-center">
           Hi, I'm{" "}
@@ -64,7 +65,18 @@ export const About = () => {
           Currently Working as Software Development Intern @ I2E Consulting Pvt
           Ltd.
         </p>
+        <a
+          href={
+            "https://drive.google.com/file/d/1rbDcIGkq_CCZYx1qaxD6brm6ijxdlS9d/view?usp=sharing"
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:text-blue-500 pt-2 md:pt-0"
+        >
+          Resume <FaExternalLinkAlt size={15} />
+        </a>
       </div>
     </div>
   );
 };
+//
