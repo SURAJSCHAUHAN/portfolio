@@ -67,7 +67,7 @@ export const About = () => {
         </p>
         <a
           href={
-            "https://drive.google.com/file/d/1rbDcIGkq_CCZYx1qaxD6brm6ijxdlS9d/view?usp=sharing"
+            "https://drive.google.com/file/d/1lNAG4ppXxLOKqX-mTmbJXlMCSdboxNcG/view?usp=sharing"
           }
           target="_blank"
           rel="noopener noreferrer"
