@@ -6,6 +6,9 @@ import { useDispatch } from "react-redux";
 import { setSelectedApp } from "../redux/appSlice";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+const resume_url =
+  "https://drive.google.com/file/d/1B_TVmexRNKNuWHptobVr4O1ltdDlO40N/view?usp=sharing";
+
 export const About = () => {
   const [maxView, setmaxView] = useState(false);
   const dispatch = useDispatch();
@@ -66,9 +69,7 @@ export const About = () => {
           Ltd.
         </p>
         <a
-          href={
-            "https://drive.google.com/file/d/1lNAG4ppXxLOKqX-mTmbJXlMCSdboxNcG/view?usp=sharing"
-          }
+          href={resume_url}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-blue-500 pt-2 md:pt-0"
