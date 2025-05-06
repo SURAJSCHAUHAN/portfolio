@@ -15,6 +15,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { ImDatabase } from "react-icons/im";
 import { FaAngular } from "react-icons/fa";
+import { SiPrisma } from "react-icons/si";
 
 export const Skills = () => {
   const [maxView, setmaxView] = useState(false);
@@ -36,6 +37,7 @@ export const Skills = () => {
     { name: "Angular", icon: <FaAngular size={50} color="#00BCFF" /> },
     { name: "GIT", icon: <FaGithub size={50} color="black" /> },
     { name: "API", icon: <SiRapid size={50} color="#00BCFF" /> },
+    { name: "Prisma", icon: <SiPrisma size={50} color="black" /> },
     { name: "MongoDB", icon: <SiMongodb size={50} color="#08B148" /> },
     { name: "SQL", icon: <ImDatabase size={50} color="#00BCFF" /> },
   ];
