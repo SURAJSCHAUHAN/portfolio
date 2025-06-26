@@ -13,7 +13,7 @@ export const Experience = () => {
 
   const data = [
     {
-      title: "Oct 2024- Present",
+      title: "Oct 2024- April 2025",
       content: (
         <div>
           <h3 className="text-start text-neutral-200 text-lg md:text-lg font-normal mb-5">

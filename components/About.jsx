@@ -7,7 +7,7 @@ import { setSelectedApp } from "../redux/appSlice";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const resume_url =
-  "https://drive.google.com/file/d/1B_TVmexRNKNuWHptobVr4O1ltdDlO40N/view?usp=sharing";
+  "https://drive.google.com/file/d/1Qx-3wkBkPGEOA6aXFuGWvj9MUrDDSPQD/view?usp=sharing";
 
 export const About = () => {
   const [maxView, setmaxView] = useState(false);
@@ -64,10 +64,10 @@ export const About = () => {
           Node.js, I focus on creating seamless front-end experiences and robust
           back-end solutions.
         </p>
-        <p className="text-sm mt-2 text-gray-300 text-center">
+        {/* <p className="text-sm mt-2 text-gray-300 text-center">
           Currently Working as Software Development Intern @ I2E Consulting Pvt
           Ltd.
-        </p>
+        </p> */}
         <a
           href={resume_url}
           target="_blank"
