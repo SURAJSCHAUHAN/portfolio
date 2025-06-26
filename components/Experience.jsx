@@ -17,13 +17,13 @@ export const Experience = () => {
       content: (
         <div>
           <h3 className="text-start text-neutral-200 text-lg md:text-lg font-normal mb-5">
-            Software Trainee @
+            Software Dev Intern @
             <span className="text-blue-500 font-bold">I2E Consulting</span>
           </h3>
           <p className="text-start text-[15px] text-gray-300">
-            I've been working as a software developer trainee at I2E
-            specializing in web. I've had the opportunity to work on various
-            projects and technologies like React, Angular, .NET etc.
+            I've worked as a software developer intern at I2E, specializing in
+            web dev. I've had the opportunity to work on various projects and
+            technologies like React, Angular, .NET etc.
           </p>
         </div>
       ),
@@ -37,9 +37,9 @@ export const Experience = () => {
             <span className="text-blue-500 font-bold">Cnetric Global</span>
           </h3>
           <p className="text-start text-[15px] text-gray-300">
-            I've been worked as a software developer trainee at Cnetric Global
-            where I have gained valuable experience in MACH Architecture, React
-            and REST-api's.
+            I've worked as a software developer trainee at Cnetric Global where
+            I have gained valuable experience in MACH Architecture, React and
+            REST-api's.
           </p>
         </div>
       ),
