@@ -7,7 +7,7 @@ import { setSelectedApp } from "../redux/appSlice";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const resume_url =
-  "https://drive.google.com/file/d/1Qx-3wkBkPGEOA6aXFuGWvj9MUrDDSPQD/view?usp=sharing";
+  "https://drive.google.com/file/d/1Z3SpmGmuBXoMgajwys8yNYgSJJjX0yuT/view?usp=sharing";
 
 export const About = () => {
   const [maxView, setmaxView] = useState(false);
