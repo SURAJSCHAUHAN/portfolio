@@ -20,6 +20,22 @@ export const Project = () => {
       url: "https://daily-journel-blog-app-main.vercel.app/",
     },
     {
+      title: "Book Management",
+      image: "./bookmang.png",
+      description:
+        "Its a role-based book management system with JWT authentication, allowing admins to manage books and users to view them; implemented protected routes via custom middleware.",
+      techStack: ["ReactJS", "NodeJS", "JWT"],
+      url: "https://book-store-frontend-suraj.vercel.app/",
+    },
+    {
+      title: "Multiplayer TicTacToe",
+      image: "./tictactoe.png",
+      description:
+        "Its a multiplayer TicTacToe game, where player can play in realtime.",
+      techStack: ["ReactJS", "FireBase"],
+      url: "https://zerocross.vercel.app/",
+    },
+    {
       title: "Tour Sense",
       image: "./toursense.png",
       description:
