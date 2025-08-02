@@ -16,7 +16,7 @@ export const Project = () => {
       image: "./blogweb.png",
       description:
         "Its a blog web, one can use CRUD application on their blog and can view others blog. It uses NextAuth for secure user management.",
-      techStack: ["NextJS", "NestJS", "Tailwind CSS"],
+      techStack: ["NextJS", "Tailwind CSS"],
       url: "https://daily-journel-blog-app-main.vercel.app/",
     },
     {
