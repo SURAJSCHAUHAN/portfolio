@@ -48,7 +48,7 @@ export const Project = () => {
       image: "./ekrahhi.png",
       description:
         "This is a frontend project for an e-commerce website, where user can buy products online.",
-      techStack: ["NextJS", "NestJS", "Tailwind CSS"],
+      techStack: ["NextJS", "Tailwind CSS"],
       url: "https://ek-raahi-suraj-frontend.vercel.app/",
     },
   ];
